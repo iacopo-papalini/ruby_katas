@@ -31,7 +31,7 @@ describe DiceRoller, '#roll' do
 
   it 'should never return a value less than 1' do
     Kernel.should_receive(:rand).with(1..20).and_return(1)
-    expect @r.roll('1d20-5').should eq 1
+    expect @r.roll('1d20-5').should eq 0
   end
 
 end

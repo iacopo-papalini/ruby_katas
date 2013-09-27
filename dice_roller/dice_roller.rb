@@ -8,7 +8,7 @@ class DiceRoller
     raise if description == nil
     modifier = calculate_modifier(description[:sign], description[:modifier].to_i)
     value = calculate_value(description[:type].to_i, description[:count].to_i)
-    [value + modifier, 1].max
+    [value + modifier, 0].max
   end
 
   def calculate_value(type, count)
